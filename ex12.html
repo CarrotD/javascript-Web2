@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function LinksetColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length)
+        { alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+
+      function BodysetColor(color)
+      {
+        document.querySelector('body').style.color = color;
+      }
+
+      function BodyBackgroundColor(color)
+      {
+        document.querySelector('body').style.backgroundColor = color;
+      }
+
+      function nightDayHandler(self)
+      {
+        var target = document.querySelector('body');
+        if (self.value==='night')
+        {
+        BodyBackgroundColor('black')
+        BodysetColor('white')
+        self.value = 'day';
+
+        LinksetColor('powderblue')
+
+        } else {
+        BodyBackgroundColor('white')
+        BodysetColor('black')
+        self.value = 'night'
+
+        LinksetColor('blue')
+
+        i = i + 1;
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+    <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+
+    <h2><a href="https://os.os">OS</a></h2>
+  </body>
+</html>
